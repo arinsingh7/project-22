@@ -64,10 +64,8 @@ function draw() {
 }
 
 function keyPressed() {
- if (keyDown === DOWN_ARROW) {
-	 packageSprite = {
-		isStatic: false
-	}
+ if (keyDown(DOWN_ARROW)) {
+	Matter.Body.setStatic(packageBody, false)
 	
   }
 }
